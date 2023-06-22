@@ -1,7 +1,7 @@
 # SpotifyDownloader
 Purpose:
     Extract tracks from Spotify playlist via provided playlist URL
-    Download mp3 files to local via soundloaders.com
+    Download mp3 files to local via spotifydown.com
 
 Prerequisite:
     All used python module installed (of course)
