@@ -6,6 +6,7 @@ import json
 from csv import writer,reader
 import re
 from SoundDownloader import initiation,SearchnDownload
+import time
 
 #load some constants from evironment file
 load_dotenv()
@@ -93,6 +94,7 @@ def downloadLoop(TrackList: list):
             print("Initiating ....")
             DWLDList = [] 
             wait,BRWS = initiation()
+            time.sleep(10)
             if (len(TrackList)<=10):
                 Loop = len(TrackList)
             else:
@@ -101,6 +103,7 @@ def downloadLoop(TrackList: list):
                 print(f"Start download ...{TrackList[i][0]}")
                 link = TrackList[i][1]
                 SearchnDownload(wait,BRWS,link,i+1)
+                time.sleep(10)
                 DWLDList.append(TrackList[i])
             BRWS.close()
             print("Please wait for all dowload to be completed.\nPress any key to confirm")
